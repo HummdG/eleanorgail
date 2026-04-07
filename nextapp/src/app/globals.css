@@ -30,3 +30,118 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
+
+/* ─── Article / Blog post body ─────────────────────────────────────── */
+.blog-content {
+  font-size: 1.0625rem;       /* 17px */
+  line-height: 1.85;
+  color: #4a4040;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;        /* 22px */
+  font-weight: 700;
+  color: #332727;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid #AFE5E6;
+  letter-spacing: -0.01em;
+}
+
+.blog-content h3:first-child {
+  margin-top: 0;
+}
+
+.blog-content blockquote {
+  position: relative;
+  margin: 2.5rem 0;
+  padding: 1.75rem 2rem 1.75rem 2.5rem;
+  background: #FAF8F5;
+  border-left: 4px solid #AFE5E6;
+}
+
+.blog-content blockquote p {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-style: italic;
+  color: #332727;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content blockquote footer {
+  font-size: 0.8125rem;
+  font-style: normal;
+  color: #9a8f8f;
+  letter-spacing: 0.04em;
+}
+
+.blog-content blockquote footer::before {
+  content: '— ';
+}
+
+.blog-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.blog-content ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: #4a4040;
+}
+
+.blog-content ul li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #AFE5E6;
+  font-size: 0.6rem;
+  top: 0.45rem;
+}
+
+.blog-content ol {
+  padding-left: 1.25rem;
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #4a4040;
+}
+
+.blog-content a {
+  color: #332727;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+
+.blog-content a:hover {
+  color: #AFE5E6;
+}
+
+.blog-content strong {
+  font-weight: 700;
+  color: #332727;
+}
+
+/* Drop-cap on the first paragraph */
+.blog-content > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-size: 4.25rem;
+  line-height: 0.8;
+  padding-right: 0.125rem;
+  margin-top: 0.2rem;
+  color: #332727;
+  font-weight: 700;
+}
